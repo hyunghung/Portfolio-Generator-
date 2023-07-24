@@ -14,7 +14,7 @@ const questions = [    {
 },
 {
     type: 'input',
-    name: 'Bio',
+    name: 'bio',
     message: 'Tell me something about youself!'
 },
 {
@@ -26,6 +26,11 @@ const questions = [    {
     type: 'input',
     name: 'Github',
     message: 'What is your GitHub URL?'
+},
+{
+    type: 'input',
+    name: 'Font Color',
+    message: 'What color would you like the text font to be?'
 }
 ];
 
@@ -43,7 +48,7 @@ inquirer
         </head>
         <body>
             <h1 class = header>Portfolio Generator</h1>
-            <section class = info>
+            <section class = info style="color: ${answers["Font Color"]};">
             <h2>${answers.name}</h2>
             <h2>${answers.location}</h2>
             <h2>${answers.bio}</h2>
